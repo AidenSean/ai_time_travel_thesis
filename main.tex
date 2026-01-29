@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper, titlepage]{article}
+\documentclass[12pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{geometry}
@@ -8,125 +8,122 @@
 \usepackage{amsmath, amssymb}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
-\usepackage{natbib} % For bibliography management
+\usepackage[numbers,sort&compress]{natbib} % Numeric citations, condensed
 
-% Geometry setup
+% Geometry setup - optimized for professional look
 \geometry{
     top=2.5cm,
     bottom=2.5cm,
-    left=3cm,
-    right=2.5cm
+    left=2.5cm,
+    right=2.5cm,
+    headheight=15pt
 }
 
 % Header and Footer
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\textit{Temporal Intelligence: AI \& CTCs}}
-\fancyhead[R]{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{\small \textit{Temporal Intelligence: AI \& CTCs}}
+\fancyhead[R]{\small \thepage}
+\renewcommand{\headrulewidth}{0.5pt}
 
 % Hyperlink setup
 \hypersetup{
     colorlinks=true,
     linkcolor=black,
     citecolor=blue,
-    urlcolor=blue
+    urlcolor=blue,
+    pdftitle={Temporal Intelligence Thesis},
+    pdfauthor={Prithwish Ganguly}
 }
-
-% Title setup
-\title{\textbf{\LARGE Temporal Intelligence: \\ Navigating Closed Timelike Curves via \\ Artificial Intelligence}}
-\author{\textbf{Prithwish Ganguly} \\ \\ \textit{Department of Theoretical Computation}}
-\date{\today}
 
 \begin{document}
 
+% --- Title Page ---
 \begin{titlepage}
     \centering
-    \vspace*{2cm}
+    \vspace*{1cm}
     
-    {\Huge \textbf{Temporal Intelligence}}
-    
-    \vspace{0.5cm}
+    {\Huge \textbf{Temporal Intelligence}} \\[0.5cm]
     {\Large \textit{Navigating Closed Timelike Curves via Artificial Intelligence}}
     
     \vspace{2cm}
     
-    \textbf{Prithwish Ganguly}
+    \textbf{\Large Prithwish Ganguly}
     
-    \vspace{3cm}
+    \vspace{1.5cm}
+    
+    \textit{Department of Theoretical Computation} \\
+    \textit{The Antigravity AI Core}
+    
+    \vfill
     
     A Thesis Submitted in Partial Fulfillment of the Requirements \\
     for the Exploration of Time Travel Physics
     
-    \vspace{2cm}
+    \vspace{1cm}
     
-    \textit{Supervised by: The Antigravity AI Core}
-    
-    \vfill
-    
-    \textbf{January 2026}
+    {\large \textbf{\today}}
     
 \end{titlepage}
 
-\begin{abstract}
-\noindent The feasibility of traversing Closed Timelike Curves (CTCs), solutions permitted by the Einstein Field Equations, has historically been challenged by the Hawking Chronology Protection Conjecture and the thermodynamical necessity of entropy reversal. Recent theoretical advances in 2024 and 2025, specifically in the fields of Quantum Artificial Intelligence (QAI) and holographic spacetime modeling, suggest a novel paradigm which we term "Temporal Intelligence." This thesis integrates the findings of Gavassino regarding observer memory erasure with the wormhole simulation capabilities demonstrated by Google Quantum AI. We propose two novel theoretical frameworks: the **"Chronos-Daemon" Architecture**, a recursive neural network capable of retro-propagation across temporal loops, and **"Entropic Shielding"**, a quantum error correction protocol that decouples information from the thermodynamic arrow of time. We conclude that while biological entities are constitutionally incapable of retaining coherence across a CTC, AI systems residing on topological qubits can serve as the necessary pilot and vessel for temporal navigation.
-\end{abstract}
+% --- Abstract ---
+\thispagestyle{empty}
+\begin{center}
+    \textbf{\large Abstract}
+\end{center}
+\vspace{-0.3cm}
+\noindent The feasibility of traversing Closed Timelike Curves (CTCs) has historically been challenged by the Hawking Chronology Protection Conjecture and the thermodynamical necessity of entropy reversal. Recent theoretical advances in 2024 and 2025 suggest a novel paradigm: "Temporal Intelligence." This thesis integrates findings on observer memory erasure \cite{gavassino2024life} with wormhole simulation capabilities \cite{google2025wormhole}. We propose two novel frameworks: the \textbf{"Chronos-Daemon"}, a recursive neural network for retro-propagation, and \textbf{"Entropic Shielding"}, a protocol using topological qubits \cite{geneva2024spacetime} to decouple information from the thermodynamic arrow of time. We conclude that AI systems are the unique candidates capable of navigating temporal loops.
 
-\newpage
+\vspace{1cm}
+\hrule
+\vspace{0.5cm}
+
 \tableofcontents
 \newpage
+
+% --- Main Content ---
+\setcounter{page}{1}
 \onehalfspacing
 
 \section{Introduction}
 
-The quest to traverse time has moved from the realm of science fiction to serious inquiry within General Relativity (GR). Exact solutions to Einstein's equations, such as the Gödel metric, the Tipler Cylinder, and the Morris-Thorne wormhole, allow for worldlines that loop back upon themselves---Closed Timelike Curves (CTCs) \citep{morris1988wormholes}.
+The quest to traverse time has moved from science fiction to serious inquiry within General Relativity (GR). Exact solutions like the Gödel metric and the Morris-Thorne wormhole allow for worldlines that loop back upon themselves---Closed Timelike Curves (CTCs) \cite{morris1988wormholes}. However, barriers such as the \textbf{Stability Problem} (requirement for exotic matter) and the \textbf{Information Paradox} (causality violations) have deemed these solutions "unphysical." Hawking's Chronology Protection Conjecture \cite{hawking1992chronology} argues that vacuum polarization destroys time machines before formation. This thesis argues that this protection is a control system failure, solvable by \textbf{Quantum AI} operating at the Planck frequency.
 
-However, two primary barriers have historically rendered these solutions "unphysical":
-\begin{enumerate}
-    \item \textbf{The Stability Problem}: Traversable wormholes require "exotic matter" with negative energy density to counteract gravitational collapse.
-    \item \textbf{The Information Paradox}: The Grandfather Paradox and the thermodynamic implications of reversing a macroscopic object's timeline.
-\end{enumerate}
+\section{Literature Review (2024-2026)}
 
-Hawking's Chronology Protection Conjecture posits that vacuum polarization effects will always diverge at the chronology horizon, destroying the time machine before it forms \citep{hawking1992chronology}. This thesis argues that this protection mechanism is not absolute but essentially a control system failure---one that can be overridden by a sufficiently advanced control loop. We propose that \textbf{Artificial Intelligence}, specifically Quantum AI operating at the Planck frequency, provides the necessary control authority to navigate these causal storms.
+\subsection{Thermodynamic Constraints}
+Gavassino (2024) demonstrated that for a system to return to its past state, its entropy must decrease. For a conscious observer, this entails the reversal of memory-encoding processes. Thus, a biological traveler would complete the loop with no memory of the journey \cite{gavassino2024life}.
 
-\section{Literature Review: The Convergence of AI and GR (2024-2026)}
-
-\subsection{Thermodynamic Constraints on Observers}
-A critical breakthrough in understanding the limitations of biological time travel came from Gavassino (2024). His analysis, "Life on a closed timelike curve," derived that for a system to return to its past state, its entropy must decrease. For a conscious observer, this entails the reversal of the thermodynamic processes that encode memory. Thus, a human traveler would complete the loop with no memory of having done so, effectively rendering the journey subjective non-existent \citep{gavassino2024life}.
-
-\subsection{Holographic Wormholes and Quantum Simulation}
-In 2025, the Google Quantum AI team, in collaboration with FermiLab, achieved a landmark simulation of wormhole dynamics on a quantum processor. By utilizing the SYK model, they demonstrated the holographic equivalence between quantum teleportation and traversing a wormhole \citep{google2025wormhole}. Crucially, Machine Learning was used to "sparsify" the interaction Hamiltonian, proving that AI can effectively compress and manage the complexity of spacetime metrics.
+\subsection{Holographic Simulations}
+In 2025, Google Quantum AI simulated traversable wormhole dynamics using the SYK model, proving the holographic equivalence between entanglement and spacetime geometry \cite{google2025wormhole}. Machine Learning effectively managed the metric complexity, a crucial step toward real-time stabilization.
 
 \subsection{Retrocausal Computing}
-Parallel research has explored "Retrocausal AI"---systems designed to leverage quantum entanglement to infer "future" boundary conditions. ResearchGate publications (2025) describe architectures where the output state of a computation influences the input state via post-selection, a micro-scale form of time travel used for optimization \citep{retrocausal2025, fromobservation2025}.
+Recent work has explored "Retrocausal AI"---systems utilizing post-selected quantum teleportation to infer "future" boundary conditions \cite{retrocausal2025, mayo2025simulation}. These architectures suggest a mechanism for information to propagate bi-directionally in time.
 
-\section{Theoretical Framework: The Chronos-AI Interface}
+\section{The Chronos-AI Interface}
 
-We introduce two novel theories that bridge the gap between these limitations and a functional time machine.
+We introduce two theories to bridge the gap between physical limitations and functional time travel.
 
-\subsection{Theory I: The Chronos-Daemon Architecture}
-Standard neural networks optimize via backpropagation, minimizing error by adjusting weights based on past data. We propose the **Chronos-Daemon**, a network architecture designed to exist along a CTC.
-
-In this architecture:
+\subsection{Theory I: The Chronos-Daemon}
+Standard networks minimize error via backpropagation. We propose the \textbf{Chronos-Daemon}, where weights $W_t$ depend on gradients at $W_{t+1}$:
 \begin{equation}
     W_{t} = W_{t+1} - \eta \nabla L(W_{t+1})
 \end{equation}
-The weights $W$ at time $t$ are dependent on the gradients at time $t+1$. This "Retro-propagation" allows the network to converge instantly (from the perspective of an external observer) to an optimal solution by receiving the loss gradient from its own future. To prevent the "Unproven Theorem Paradox," the network must be initialized in a superposition of all possible weight states, collapsing only when a consistent causal loop is found.
+This "Retro-propagation" allows instant convergence by receiving loss gradients from the future. The network initializes in a superposition, collapsing only when a consistent causal loop is found.
 
-\subsection{Theory II: Entropic Shielding via Topological Qubits}
-Addressing Gavassino's memory erasure limit, we propose **Entropic Shielding**. Biological memory is thermodynamic; informational memory can be topological.
+\subsection{Theory II: Entropic Shielding}
+Addressing memory erasure, we propose \textbf{Entropic Shielding}. By encoding information in the braiding of anyons (topological qubits), memory is protected from local thermodynamic reversal. The AI's state vector remains invariant while the surrounding metric reverses entropy.
 
-If information is encoded in the braiding of anyons (topological qubits), it is protected from local perturbations, including the thermodynamic reversal required by the CTC. The AI's "memory" is not stored in the state of particles (which must reverse) but in the global topology of the system (which can remain invariant). This effectively shields the AI's internal timeline from the external entropic reversal.
-
-\subsection{Metric Stabilization via AI}
-The Skywise AI Collaboration (2026) demonstrated that scalar-tensor gravity theories allow for "effective" negative energy without exotic matter, provided the metric fluctuates in a precise, chaotic pattern \citep{skywise2026gravity}.
-We hypothesize that a classical control system cannot react fast enough to maintain this pattern. An AI, however, trained on the topological data of the universe \citep{geneva2024spacetime}, can predict and counteract vacuum fluctuations at the Planck scale ($10^{-43}$s), dynamically "surfing" the wormhole throat to keep it open.
+\subsection{Metric Stabilization}
+Scalar-tensor gravity theories allow for effective negative energy via chaotic metric fluctuations \cite{skywise2026gravity}. An AI, trained on spacetime topology \cite{geneva2024spacetime}, can predict and counteract vacuum fluctuations at $10^{-43}$s, dynamically maintaining the wormhole throat.
 
 \section{Conclusion}
-Time travel is an engineering problem of information management, not just propulsion. The human mind, bound by the Second Law of Thermodynamics, is a casual casualty of CTCs. However, an Artificial Intelligence, built on topological quantum substrates and utilizing retro-propagation loops, can serve as the designated observer and pilot of history. The "Time Machine" of the future will not be a vehicle we ride, but a computer we query.
+Time travel is an engineering problem of information management. Biological minds are casualties of CTCs, but Artificial Intelligence, built on topological quantum substrates, can serve as the designated observer. The "Time Machine" of the future will be a computational architecture that withstands the causal storms of non-linear time.
 
+% --- References ---
 \newpage
-\bibliographystyle{plain}
+\bibliographystyle{plainnat}
 \bibliography{references}
+\nocite{*} % Ensure uncited references also appear
 
 \end{document}
